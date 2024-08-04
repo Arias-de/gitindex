@@ -19,7 +19,7 @@
         header {
             text-align: center;
             padding: 100px 20px;
-            background-image: url('travail.jpeg');
+            background-image: url(' images/travail.jpeg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -230,28 +230,106 @@
             margin-top: 20px;
             font-size: 16px;
         }
+
+        /* Ajoutez cette partie à la fin de votre CSS */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .section {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects-column {
+        flex: none;
+        width: 100%;
+    }
+
+    .mockups-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .mockup {
+        border-radius: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .section-content h2 {
+        font-size: 20px;
+    }
+
+    .section-content p {
+        font-size: 14px;
+    }
+
+    .mockups-title {
+        font-size: 28px;
+    }
+
+    .mockup {
+        border-radius: 3px;
+    }
+
+    .contact-details p {
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Nom du Designer</h1>
+        <h1>GNANCADJA Aichatou Onix</h1>
     </header>
 
     <div class="container">
         <div class="section section-combined">
-            <img src="combined.jpg" alt="Image expérience professionnelle et niveau d'étude">
+            <img src=" images/etude1.jpg" alt="Image expérience professionnelle et niveau d'étude">
             <div class="section-content">
                 <h2>Expérience & Éducation</h2>
                 <p class="icon-text"><i class="fas fa-briefcase"></i> 10 ans d'expérience en design graphique.</p>
-                <p class="icon-text"><i class="fas fa-university"></i> Diplôme en Design de l'Université XYZ.</p>
+                <p class="icon-text"><i class="fas fa-university"></i> Diplôme en Design de l'Université PAG.</p>
             </div>
         </div>
 
         <div class="projects-container">
             <div class="projects-column">
                 <div class="section project1 section-blue">
-                    <img src=" images/eya1.jpg" alt="Projet 1">
+                    <img src="images/eya1.jpg" alt="Projet 1">
                     <div class="section-content">
                         <h2>Affiche pour salon de coiffure</h2>
                         <p>Pour réalisé cet affiche j’ai opté pour 
@@ -266,42 +344,72 @@
                 </div>
 
                 <div class="section project2 section-orange">
-                    <img src=" images/eya2.jpg" alt="Projet 2">
+                    <img src="images/eya2.jpg" alt="Projet 2">
                     <div class="section-content">
-                        <h2>Projet 2</h2>
-                        <p>Description du projet 2.</p>
+                        <h2>FLYERS POUR PAG
+                        </h2>
+                        <p>Pour réalisé cet affiche j’ai opté pour 
+                            un fomat de papier 14,8 / 21 cm.
+                            J’ai préparé le fond avec un background
+                            que j’ai téléchargé, en suite j’ai importé 
+                            les image sur le plan de travail et j’ai tracé
+                            des formes et j’ai fais la mis en forme puis
+                            j’ai écris les textes. En fin j’ai mis le .</p>
                     </div>
                 </div>
 
                 <div class="section project3 section-blue">
-                    <img src=" images/eya3.jpg" alt="Projet 3">
+                    <img src="images/mo5.jpg" alt="Projet 3">
                     <div class="section-content">
-                        <h2>Projet 3</h2>
-                        <p>Description du projet 3.</p>
+                        <h2>ROLL-UP</h2>
+                        <p>Pour réalisé cet affiche j’ai opté pour 
+                            un fomat de papier 85 / 200 cm.
+                            J’ai préparé le fond avec un background
+                            que j’ai téléchargé, en suite j’ai importé 
+                            les image sur le plan de travail et j’ai tracé
+                            des formes et j’ai fais la mis en forme puis
+                            j’ai écris les textes. En fin j’ai mis le titre 
+                            de l’entreprise bien en avant.</p>
                     </div>
                 </div>
             </div>
             <div class="projects-column">
                 <div class="section project4 section-orange">
-                    <img src=" images/eya4.jpg" alt="Projet 4">
+                    <img src="images/eya4.jpg" alt="Projet 4">
                     <div class="section-content">
-                        <h2>Projet 4</h2>
-                        <p>Description du projet 4.</p>
+                        <h2>Carte de visite</h2>
+                        <p>Pour réalisé cet affiche j’ai opté pour 
+                            un fomat de papier 8,5 / 5,5 cm.
+                            J’ai préparé le fond avec un background
+                            que j’ai téléchargé, en suite j’ai importé 
+                            les image sur le plan de travail et j’ai tracé
+                            des formes et j’ai fais la mis en forme puis
+                            j’ai écris les textes. En fin j’ai mis le titre 
+                            de l’entreprise bien en avant.</p>
                     </div>
                 </div>
 
                 <div class="section project5 section-blue">
-                    <img src=" images/eya5.jpg" alt="Projet 5">
+                    <img src="images/eya5.jpg" alt="Projet 5">
                     <div class="section-content">
-                        <h2>Projet 5</h2>
-                        <p>Description du projet 5.</p>
+                        <h2>Affiche pour Tabaski</h2>
+                        <p>Pour réalisé cet affiche j’ai opté pour 
+                            un fomat de papier 1080 / 1080 pixel .
+                            J’ai préparé le fond avec un background
+                            que j’ai téléchargé, en suite j’ai importé 
+                            les image sur le plan de travail et j’ai tracé
+                            des formes et j’ai fais la mis en forme puis
+                            j’ai écris les textes. En fin j’ai mis le titre 
+                            de l’entreprise bien en avant.
+                            .</p>
                     </div>
                 </div>
 
                 <div class="section project6 section-orange">
                     <img src="images/eya6.jpg" alt="Projet 6">
                     <div class="section-content">
-                        <h2>Projet 6</h2>
+                        <h2>Carte d’Invitation
+                        </h2>
                         <p>Pour réalisé cet affiche j’ai opté pour 
                             un fomat de papier 9,9 / 21 cm.
                             J’ai préparé le fond avec un background
@@ -319,19 +427,19 @@
             <h2 class="mockups-title">LES MOCKUPS</h2>
             <div class="mockups-grid">
                 <div class="mockup">
-                    <img src="mockup1.jpg" alt="Mockup 1">
+                    <img src="images/mo1.jpg" alt="Mockup 1">
                 </div>
                 <div class="mockup">
-                    <img src="mockup2.jpg" alt="Mockup 2">
+                    <img src="images/mo2.jpg" alt="Mockup 2">
                 </div>
                 <div class="mockup">
-                    <img src="mockup3.jpg" alt="Mockup 3">
+                    <img src="images/mo3.jpg" alt="Mockup 3">
                 </div>
                 <div class="mockup">
-                    <img src="mockup4.jpg" alt="Mockup 4">
+                    <img src="images/mo4.jpg" alt="Mockup 4">
                 </div>
                 <div class="mockup">
-                    <img src="mockup5.jpg" alt="Mockup 5">
+                    <img src="images/mo6.jpg" alt="Mockup 5">
                 </div>
             </div>
         </div>

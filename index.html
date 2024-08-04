@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('travail.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .section img:hover {
+            transform: rotate(10deg);
+        }
+
+        .section-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-content h2 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .section-content p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .section-combined {
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-combined::before {
+            content: "\f2bb";
+            font-family: 'FontAwesome';
+            font-size: 150px;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .section-content p.icon-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-content i {
+            font-size: 20px;
+            color: white;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .projects-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-blue {
+            background-color: #3498db;
+        }
+
+        .section-orange {
+            background-color: #e74c3c;
+        }
+
+        .mockups-container {
+            margin: 40px 0;
+        }
+
+        .mockups-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .mockups-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .mockup {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mockup:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .mockup img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .medals, .contacts {
+            flex: 1;
+            margin: 20px;
+        }
+
+        .medals {
+            text-align: center;
+        }
+
+        .medals i {
+            font-size: 40px;
+            margin: 0 15px;
+            color: #f1c40f;
+        }
+
+        .contacts {
+            text-align: center;
+        }
+
+        .contacts a {
+            color: white;
+            font-size: 24px;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contacts a:hover {
+            color: #3498db;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Nom du Designer</h1>
+    </header>
+
+    <div class="container">
+        <div class="section section-combined">
+            <img src="combined.jpg" alt="Image expérience professionnelle et niveau d'étude">
+            <div class="section-content">
+                <h2>Expérience & Éducation</h2>
+                <p class="icon-text"><i class="fas fa-briefcase"></i> 10 ans d'expérience en design graphique.</p>
+                <p class="icon-text"><i class="fas fa-university"></i> Diplôme en Design de l'Université XYZ.</p>
+            </div>
+        </div>
+
+        <div class="projects-container">
+            <div class="projects-column">
+                <div class="section project1 section-blue">
+                    <img src=" images/eya1.jpg" alt="Projet 1">
+                    <div class="section-content">
+                        <h2>Affiche pour salon de coiffure</h2>
+                        <p>Pour réalisé cet affiche j’ai opté pour 
+                            un fomat de papier 1080/1080 pixel.
+                            J’ai préparé le fond avec un background
+                            que j’ai téléchargé, en suite j’ai importé 
+                            les image sur le plan de travail et j’ai tracé
+                            des formes et j’ai fais la mis en forme puis
+                            j’ai écris les textes. En fin j’ai mis le titre 
+                            de l’entreprise bien en avant.</p>
+                    </div>
+                </div>
+
+                <div class="section project2 section-orange">
+                    <img src=" images/eya2.jpg" alt="Projet 2">
+                    <div class="section-content">
+                        <h2>Projet 2</h2>
+                        <p>Description du projet 2.</p>
+                    </div>
+                </div>
+
+                <div class="section project3 section-blue">
+                    <img src=" images/eya3.jpg" alt="Projet 3">
+                    <div class="section-content">
+                        <h2>Projet 3</h2>
+                        <p>Description du projet 3.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-column">
+                <div class="section project4 section-orange">
+                    <img src=" images/eya4.jpg" alt="Projet 4">
+                    <div class="section-content">
+                        <h2>Projet 4</h2>
+                        <p>Description du projet 4.</p>
+                    </div>
+                </div>
+
+                <div class="section project5 section-blue">
+                    <img src=" images/eya5.jpg" alt="Projet 5">
+                    <div class="section-content">
+                        <h2>Projet 5</h2>
+                        <p>Description du projet 5.</p>
+                    </div>
+                </div>
+
+                <div class="section project6 section-orange">
+                    <img src="images/eya6.jpg" alt="Projet 6">
+                    <div class="section-content">
+                        <h2>Projet 6</h2>
+                        <p>Pour réalisé cet affiche j’ai opté pour 
+                            un fomat de papier 9,9 / 21 cm.
+                            J’ai préparé le fond avec un background
+                            que j’ai téléchargé, en suite j’ai importé 
+                            les image sur le plan de travail et j’ai tracé
+                            une formes et positionné les sponsors dessus
+                            j’ai fais la mis en forme puisj’ai écris les textes.
+                            En fin j’ai mis le titre de l’entreprise bien en avant..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mockups-container">
+            <h2 class="mockups-title">LES MOCKUPS</h2>
+            <div class="mockups-grid">
+                <div class="mockup">
+                    <img src="mockup1.jpg" alt="Mockup 1">
+                </div>
+                <div class="mockup">
+                    <img src="mockup2.jpg" alt="Mockup 2">
+                </div>
+                <div class="mockup">
+                    <img src="mockup3.jpg" alt="Mockup 3">
+                </div>
+                <div class="mockup">
+                    <img src="mockup4.jpg" alt="Mockup 4">
+                </div>
+                <div class="mockup">
+                    <img src="mockup5.jpg" alt="Mockup 5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="medals">
+                <i class="fas fa-medal"></i>
+                <i class="fas fa-trophy"></i>
+                <i class="fas fa-award"></i>
+            </div>
+            <div class="contacts">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="contact-details">
+            <p>Tel: +123 456 7890</p>
+            <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
